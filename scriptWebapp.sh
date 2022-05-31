@@ -1,18 +1,12 @@
+
 SUBSCRIPTION="Simplon ARA - LYON P#20 Admin Cloud"
 RESOURCEGROUP="CDSMgroup"
 LOCATION="eastus"
 PLANNAME="CDSMPlanApp"
 PLANSKU="P1v2"
-SITENAME="CamilleDeSousaMathieuBrief4"
+SITENAME="CamilleDeSousaMathieuBrief4auto"
 RUNTIME="PHP|7.4"
 
-# login supports device login, username/password, and service principals
-# see https://docs.microsoft.com/en-us/cli/azure/?view=azure-cli-latest#az_login
-az login
-# list all of the available subscriptions
-az account list -o table
-# set the default subscription for subsequent operations
-az account set --subscription $SUBSCRIPTION
 # create a resource group for your application
 az group create --name $RESOURCEGROUP --location $LOCATION
 # create an appservice plan (a machine) where your site will run
